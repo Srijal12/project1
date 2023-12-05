@@ -1,0 +1,255 @@
+*{
+    margin:0;
+    padding:0;
+    box-sizing: border-box;
+    font-family: 'montserrat';
+color:rgb(0, 0, 0);
+}
+html,body{
+    width:100%;
+  
+    height:100%;
+}
+#cursor{
+    height:20px;
+    width:20px;
+    background-color: rgba(179, 115, 115);
+    border-radius: 50%;
+    position: fixed;
+    z-index:99;
+}
+#cursor-blur{
+    height: 300px;
+    width:300px;
+    background-color: rgba(255, 255, 255, 0.799);
+    border-radius:50%;
+    position: fixed;
+ filter:blur(50px);
+ z-index:9;
+ 
+}
+#nav h2{
+    text-transform:uppercase;
+    font-weight: 550;
+ align-self:e;
+
+  
+}
+
+#nav{
+height:150px;;
+width: 100%;
+display:flex;/*manage context in one line*/
+align-items:center;/*set in center in box vertically*/
+justify-content: flex-start;
+padding: 0 150px ;/*spacing inside box*/
+gap:50px;
+position: fixed;
+z-index: 10;
+
+}
+#nav img{
+    height:75px;
+
+}
+#nav h4{
+    text-transform:uppercase;
+    font-weight: 550;
+    text-decoration:overline rgb(114, 15, 15);
+
+  
+}
+
+   
+video {
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+    z-index: -1;
+    align-items:right;
+    position: fixed;
+  }
+  #main{
+position:relative;
+background-color:rgba(255, 111, 0, 0.132);
+  }
+  #page1{
+    height:100vh;
+    width:100%;
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+     text-align: center;
+     z-index: 9;
+}
+#page1 h1{
+    font-size: 100px;
+    font-weight: 600;
+    position:relative;
+   
+}
+#page1 h1::before{
+    content:"READ. EAT. PLAY.";
+    position:absolute;
+    color:white;
+    top:-4px;
+    left:-4px;
+    -webkit-text-stroke:2px rgb(179, 115, 115);
+    z-index: -1;
+}
+#page1 H6{
+    font-size: 25px;
+    font-weight: 800;
+   margin-top:  10px;
+    margin-bottom: 20px ;
+}
+#page1 p{
+    font-size: 17px;
+    font-weight:500;
+    width: 40%;
+}
+#page2{
+   
+    min-height:80vh ;
+    width: 100%;
+  
+   z-index: 10;
+
+}
+#scroller {
+   
+    white-space:nowrap;
+    overflow-x: auto;
+    overflow-y: hidden;
+    position: relative;
+    z-index: 9;
+}
+#scroller::-webkit-scrollbar{
+    display: none;
+}
+#scroller-in{
+
+    display:inline-block;
+    white-space:nowrap;
+    animation-name:scroll;
+    animation-duration:20s;
+    animation-timing-function: linear;
+    animation-iteration-count:infinite ;
+}
+#scroller-in{
+    display:inline-block;
+    white-space:nowrap;
+}
+#scroller h4{
+    display:inline-block;
+    font-size:80px;
+    font-weight:800;
+    font-family:gilroy;
+    transition: all linear 0.5s;
+    margin-right: 100px;
+    -webkit-text-stroke:rgba(0, 0, 0, 0.791) 3px;
+    color: transparent;
+}
+#scroller h4:hover{
+    color: rgb(179, 115, 115);
+}
+@keyframes scroll{
+    from{
+        transform: translateX(0);
+    }
+    from{
+        transform: translateX(-100%);
+    }
+}#aboutus{
+    height:30vh;
+    width:100%;
+    background-color: rgba(240, 248, 255, 0.335);
+    display:flex;
+    padding:0 60px;
+    align-items: center;
+    justify-content: space-around;
+    position: relative;
+   
+    justify-content: space-around;
+}
+#aboutus img{
+border-radius: 20px;
+object-fit: cover;
+}
+#ABOUTUS-IN{
+    width:40%;
+    text-align: center;
+}
+#ABOUTUS-IN h3{
+font-size: 54px;
+font-weight: 800;
+margin-bottom: 40px;
+}
+#ABOUTUS-IN p{
+    font-size: 20px;
+    line-height: 26px;
+}
+#cards-container{
+    background-color: rgba(0, 0, 0, 0.482);
+    height: 40vh;
+    display: flex;
+    align-items: center;
+    justify-content:space-evenly;
+    position: relative;
+    z-index: index 10;;
+}
+.card{
+    height: 80%;
+    width: 22%;
+    background-color:white;
+     border-radius: 20px;
+     background-size: center;
+     background-position:center;
+     overflow: hidden;
+      z-index: 9;
+     transition: all ease 0.6s;
+}
+#card1{
+    background-image: url(https://source.unsplash.com/380x280/?BOOK);
+   
+}
+#card2{
+    background-image: url(https://source.unsplash.com/380x280/?BOOK,nature);
+  
+}
+#card3{
+    background-image: url(https://source.unsplash.com/380x280/?BOOK,kids);
+
+}
+.overplay{
+    height: 100%;
+    width:100%;
+    background: linear-gradient(white,transparent);
+    padding: 30px;
+    padding-top:60px;
+    position: relative;
+   opacity: 0;
+   z-index: 9;
+    transition: all ease 0.6s;
+}
+.overplay h4{
+    color:black;
+    font-size: 40px;
+    text-transform: uppercase;
+    white-space:nowrap;
+    margin-bottom: 20px;
+    font-weight: 800;
+}
+.overplay p{
+    color:black;
+    font-size :18px;
+    font-weight: 800; ;
+}
+.card:hover .overplay{
+    opacity:1;
+}
+.card:hover{
+    transform: rotate3d(1,1,0,20deg);
+}
